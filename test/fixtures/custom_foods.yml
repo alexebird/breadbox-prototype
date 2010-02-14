@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  fresh_for: 1
+  storage_location_id: 
+  user: 
+  provided_food: 
+
+two:
+  name: MyString
+  fresh_for: 1
+  storage_location_id: 
+  user: 
+  provided_food: 

@@ -1,0 +1,27 @@
+<h1>Listing provided_foods</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fresh for</th>
+    <th>Storage location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @provided_foods.each do |provided_food| %>
+  <tr>
+    <td><%= provided_food.name %></td>
+    <td><%= provided_food.fresh_for %></td>
+    <td><%= provided_food.storage_location %></td>
+    <td><%= link_to 'Show', provided_food %></td>
+    <td><%= link_to 'Edit', edit_provided_food_path(provided_food) %></td>
+    <td><%= link_to 'Destroy', provided_food, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New provided_food', new_provided_food_path %>

@@ -1,0 +1,13 @@
+<p>
+  <b>Inventory transaction:</b>
+  <%= @inventory_entry.inventory_transaction %>
+</p>
+
+<p>
+  <b>Added date:</b>
+  <%= @inventory_entry.added_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_entry_path(@inventory_entry) %> |
+<%= link_to 'Back', inventory_entries_path %>

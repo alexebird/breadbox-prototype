@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%= @provided_food.name %>
+</p>
+
+<p>
+  <b>Fresh for:</b>
+  <%= @provided_food.fresh_for %>
+</p>
+
+<p>
+  <b>Storage location:</b>
+  <%= @provided_food.storage_location %>
+</p>
+
+
+<%= link_to 'Edit', edit_provided_food_path(@provided_food) %> |
+<%= link_to 'Back', provided_foods_path %>
