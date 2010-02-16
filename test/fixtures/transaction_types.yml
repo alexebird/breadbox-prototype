@@ -1,7 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+added:
+  name: added
 
-two:
-  name: MyString
+created:
+  name: created
+
+removed:
+  name: removed
+
+deleted:
+  name: deleted
+
+changed:
+  name: changed

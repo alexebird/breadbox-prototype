@@ -1,4 +1,4 @@
 class CustomFood < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :provided_food
+  has_one :user
+  has_one :provided_food
 end

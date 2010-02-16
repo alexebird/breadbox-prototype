@@ -1,15 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  fresh_for: 1
+pasta_sauce:
+  name: "pasta sauce"
+  fresh_for: 3
   storage_location_id: 
-  user: 
+  user: alex
   provided_food: 
 
-two:
-  name: MyString
-  fresh_for: 1
-  storage_location_id: 
-  user: 
-  provided_food: 

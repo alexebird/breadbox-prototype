@@ -13,8 +13,10 @@ ActiveRecord::Schema.define(:version => 20100213233813) do
 
   create_table "custom_foods", :force => true do |t|
     t.string   "name"
-    t.integer  "fresh_for"
-    t.integer  "storage_location_id"
+    t.integer  "lasts_in_room"
+    t.integer  "lasts_in_fridge"
+    t.integer  "lasts_in_freezer"
+    t.integer  "recommended_location"
     t.integer  "user_id"
     t.integer  "provided_food_id"
     t.datetime "created_at"
@@ -49,8 +51,10 @@ ActiveRecord::Schema.define(:version => 20100213233813) do
 
   create_table "provided_foods", :force => true do |t|
     t.string   "name"
-    t.integer  "fresh_for"
-    t.integer  "storage_location_id"
+    t.integer  "lasts_in_room"
+    t.integer  "lasts_in_fridge"
+    t.integer  "lasts_in_freezer"
+    t.integer  "recommended_location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

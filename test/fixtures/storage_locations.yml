@@ -1,7 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+fridge:
+  name: refrigerator
 
-two:
-  name: MyString
+freezer:
+  name: freezer
+
+room:
+  name: room

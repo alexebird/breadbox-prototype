@@ -1,4 +1,4 @@
 class ModelTransaction < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :transaction_type
+  has_one :user
+  has_one :transaction_type
 end
