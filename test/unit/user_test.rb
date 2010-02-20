@@ -29,4 +29,13 @@ class UserTest < ActiveSupport::TestCase
     u2.save
     assert u2.password == salted_pass, "Password was re-salted upon saving."
   end
+
+  test "adding a food creates an inventory transaction" do
+    u = users(:alex)
+    f = provided_foods(:bread)
+    u.add_food_to_inventory(f)
+    u.inventory_transactions.each do |ie|
+      puts ie.to_s
+    end
+  end
 end

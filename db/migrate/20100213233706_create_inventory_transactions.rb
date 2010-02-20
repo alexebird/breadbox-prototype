@@ -2,8 +2,8 @@ class CreateInventoryTransactions < ActiveRecord::Migration
   def self.up
     create_table :inventory_transactions do |t|
       t.references :user
-      t.references :transaction_type
-      t.references :food
+      t.string :transaction_type
+      t.references :food, :polymorphic => true
 
       t.timestamps
     end

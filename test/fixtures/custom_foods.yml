@@ -1,9 +1,1 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-pasta_sauce:
-  name: "pasta sauce"
-  fresh_for: 3
-  storage_location_id: 
-  user: alex
-  provided_food: 
-

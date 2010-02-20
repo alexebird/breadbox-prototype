@@ -3,7 +3,7 @@ class CreateModelTransactions < ActiveRecord::Migration
     create_table :model_transactions do |t|
       t.references :user
       t.integer :model_id
-      t.references :transaction_type
+      t.string :transaction_type
       t.string :field_name
       t.string :old_value
       t.string :new_value

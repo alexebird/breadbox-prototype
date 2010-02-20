@@ -1,5 +1,8 @@
 class InventoryTransaction < ActiveRecord::Base
-  has_one :user
-  has_one :transaction_type
-  has_one :food
+  belongs_to :user
+  belongs_to :food, :polymorphic => true
+
+  def to_s
+    "InventoryTransaction: " + self.food.name.capitalize + " " + self.transaction_type
+  end
 end

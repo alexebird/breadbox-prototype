@@ -5,4 +5,4 @@ bread:
   lasts_in_room: 120
   lasts_in_fridge: 336
   lasts_in_freezer: 960
-  recommended_location: fridge
+  storage_location_id: fridge

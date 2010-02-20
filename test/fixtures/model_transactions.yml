@@ -1,17 +1,1 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  user: 
-  model_id: 1
-  transaction_type: 
-  field_name: MyString
-  old_value: MyString
-  new_value: MyString
-
-two:
-  user: 
-  model_id: 1
-  transaction_type: 
-  field_name: MyString
-  old_value: MyString
-  new_value: MyString
