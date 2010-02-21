@@ -14,30 +14,30 @@ class ProvidedFoodsControllerTest < ActionController::TestCase
 
   test "should create provided_food" do
     assert_difference('ProvidedFood.count') do
-      post :create, :provided_food => provided_foods(:one).attributes
+      post :create, :provided_food => provided_foods(:bread).attributes
     end
 
     assert_redirected_to provided_food_path(assigns(:provided_food))
   end
 
   test "should show provided_food" do
-    get :show, :id => provided_foods(:one).to_param
+    get :show, :id => provided_foods(:bread).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => provided_foods(:one).to_param
+    get :edit, :id => provided_foods(:bread).to_param
     assert_response :success
   end
 
   test "should update provided_food" do
-    put :update, :id => provided_foods(:one).to_param, :provided_food => provided_foods(:one).attributes
+    put :update, :id => provided_foods(:bread).to_param, :provided_food => provided_foods(:bread).attributes
     assert_redirected_to provided_food_path(assigns(:provided_food))
   end
 
   test "should destroy provided_food" do
     assert_difference('ProvidedFood.count', -1) do
-      delete :destroy, :id => provided_foods(:one).to_param
+      delete :destroy, :id => provided_foods(:bread).to_param
     end
 
     assert_redirected_to provided_foods_path

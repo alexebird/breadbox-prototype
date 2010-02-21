@@ -1,0 +1,25 @@
+- form_for(@custom_food) do |f|
+= f.error_messages
+.field
+  = f.label :name
+  %br
+  = f.text_field :name
+.field
+  = f.label :fresh_for
+  %br
+  = f.text_field :fresh_for
+.field
+  = f.label :storage_location
+  %br
+  = f.text_field :storage_location
+.field
+  = f.label :user
+  %br
+  = f.text_field :user
+.field
+  = f.label :provided_food
+  %br
+  = f.text_field :provided_food
+.actions
+  = f.submit
+- end

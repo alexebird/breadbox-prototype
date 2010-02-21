@@ -4,6 +4,7 @@ class CreateInventoryTransactions < ActiveRecord::Migration
       t.references :user
       t.string :transaction_type
       t.references :food, :polymorphic => true
+      t.references :inventory_entry
 
       t.timestamps
     end

@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20100213233813) do
   end
 
   create_table "inventory_entries", :force => true do |t|
-    t.integer  "inventory_transaction_id"
     t.datetime "added_date"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20100213233813) do
     t.string   "transaction_type"
     t.integer  "food_id"
     t.string   "food_type"
+    t.integer  "inventory_entry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

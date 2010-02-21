@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :custom_foods
   has_many :model_transactions
   has_many :inventory_transactions
-  has_many :inventory_entries, :through => :inventory_transaction
+  has_many :inventory_entries, :through => :inventory_transactions
 
   validates_presence_of :email, :name, :password
   validates_uniqueness_of :email
@@ -17,8 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def add_food_to_inventory(food)
-    it = InventoryTransaction.create(:food => food, :user => self, :transaction_type => TransactionType::ADDED)
-    entry = InventoryEntry.create(:inventory_transaction => it, :added_date => Time.now)
-    #self.inventory_entries << entry
+    ie = InventoryEntry.create(:added_date => Time.now)
+    self.inventory_transactions.create(:food => food, :user => self, :inventory_entry => ie, :transaction_type => TransactionType::ADDED)
   end
 end

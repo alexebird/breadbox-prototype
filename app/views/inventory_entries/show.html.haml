@@ -1,0 +1,11 @@
+%p
+  %b
+    Inventory transaction:
+  = @inventory_entry.inventory_transaction
+%p
+  %b
+    Added date:
+  = @inventory_entry.added_date
+= link_to 'Edit', edit_inventory_entry_path(@inventory_entry)
+|
+= link_to 'Back', inventory_entries_path

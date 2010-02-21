@@ -1,0 +1,23 @@
+%p
+  %b
+    Name:
+  = @custom_food.name
+%p
+  %b
+    Fresh for:
+  = @custom_food.fresh_for
+%p
+  %b
+    Storage location:
+  = @custom_food.storage_location
+%p
+  %b
+    User:
+  = @custom_food.user
+%p
+  %b
+    Provided food:
+  = @custom_food.provided_food
+= link_to 'Edit', edit_custom_food_path(@custom_food)
+|
+= link_to 'Back', custom_foods_path

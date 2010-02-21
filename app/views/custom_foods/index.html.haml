@@ -1,0 +1,38 @@
+%h1
+  Listing custom_foods
+%table
+  %tr
+    %th
+      Name
+    %th
+      Fresh for
+    %th
+      Storage location
+    %th
+      User
+    %th
+      Provided food
+    %th
+    %th
+    %th
+  - @custom_foods.each do |custom_food|
+  %tr
+    %td
+      = custom_food.name
+    %td
+      = custom_food.fresh_for
+    %td
+      = custom_food.storage_location
+    %td
+      = custom_food.user
+    %td
+      = custom_food.provided_food
+    %td
+      = link_to 'Show', custom_food
+    %td
+      = link_to 'Edit', edit_custom_food_path(custom_food)
+    %td
+      = link_to 'Destroy', custom_food, :confirm => 'Are you sure?', :method => :delete
+  - end
+%br
+= link_to 'New custom_food', new_custom_food_path

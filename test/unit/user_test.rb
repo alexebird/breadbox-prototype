@@ -30,12 +30,19 @@ class UserTest < ActiveSupport::TestCase
     assert u2.password == salted_pass, "Password was re-salted upon saving."
   end
 
+  test "adding a food creates an inventory entry" do
+    u = users(:alex)
+    f = provided_foods(:bread)
+    before_size = u.inventory_entries.size
+    u.add_food_to_inventory(f)
+    assert u.inventory_entries.size == before_size + 1, "An InventoryEntry was not created."
+  end
+
   test "adding a food creates an inventory transaction" do
     u = users(:alex)
     f = provided_foods(:bread)
+    before_size = u.inventory_transactions.size 
     u.add_food_to_inventory(f)
-    u.inventory_transactions.each do |ie|
-      puts ie.to_s
-    end
+    assert u.inventory_transactions.size == before_size + 1, "An InventoryTransaction was not created."
   end
 end
