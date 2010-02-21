@@ -16,8 +16,8 @@
           = text_logo + ':'
           it helps you keep track of your food.
       #content
-        %p.notice
-          = notice
+        - if notice
+          %p.notice= notice
         = yield
       #footer
         &copy; 2010 Alex Bird.
