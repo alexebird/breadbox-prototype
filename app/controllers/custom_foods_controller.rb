@@ -1,4 +1,6 @@
 class CustomFoodsController < ApplicationController
+  layout 'secure'
+
   # GET /custom_foods
   # GET /custom_foods.xml
   def index

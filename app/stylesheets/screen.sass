@@ -3,6 +3,7 @@
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base.sass
 @import partials/mixins.sass
+@import partials/colors.sass
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
 // Import the non-default scaffolding module.
@@ -25,7 +26,7 @@ form.bp
   +blueprint-form
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
-body.three-col
+//body.three-col
   #container
     +container
   #header, #footer
@@ -43,6 +44,19 @@ body.three-col
 
 ///// Abird's Additions /////
 
+body.one-col
+  #container
+    +container
+  #header, #footer
+    +column(!blueprint_grid_columns)
+  #footer
+    text-align: center
+    background-color = !bgGray
+  #content
+    +column(!blueprint_grid_columns)
+    input[type="submit"]
+      +button-button
+
 body.two-col
   #container
     +container
@@ -50,22 +64,20 @@ body.two-col
     +column(!blueprint_grid_columns)
   #footer
     text-align: center
+    background-color = !bgGray
   #sidebar
     // true means it's the last column in the row
-    +column(16, true)
+    +column(14, true)
   #content
-    +column(8)
+    +column(10)
     input[type="submit"]
       +button-button
 
-.notice
-  display: none
-
 span.breadboxLogo
+  border: black solid 1px
   +fontHelvetica
   .breadPart
     color: black
   .boxPart
     color: white
     background-color: green
-

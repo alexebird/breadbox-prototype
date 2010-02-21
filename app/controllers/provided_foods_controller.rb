@@ -1,4 +1,6 @@
 class ProvidedFoodsController < ApplicationController
+  layout 'secure'
+
   # GET /provided_foods
   # GET /provided_foods.xml
   def index

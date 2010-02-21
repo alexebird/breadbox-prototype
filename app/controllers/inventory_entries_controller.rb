@@ -1,4 +1,6 @@
 class InventoryEntriesController < ApplicationController
+  layout 'secure'
+
   # GET /inventory_entries
   # GET /inventory_entries.xml
   def index

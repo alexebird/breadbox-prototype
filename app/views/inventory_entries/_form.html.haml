@@ -1,13 +1,12 @@
 - form_for(@inventory_entry) do |f|
-= f.error_messages
-.field
-  = f.label :inventory_transaction
-  %br
-  = f.text_field :inventory_transaction
-.field
-  = f.label :added_date
-  %br
-  = f.datetime_select :added_date
-.actions
-  = f.submit
-- end
+  = f.error_messages
+  .field
+    = f.label :inventory_transaction
+    %br
+    = f.text_field :inventory_transaction
+  .field
+    = f.label :added_date
+    %br
+    = f.datetime_select :added_date
+  .actions
+    = f.submit

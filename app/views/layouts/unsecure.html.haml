@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title BreadBox
+    %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
+    = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body.bp.two-col
+    #container
+      #header
+        %h1
+          = text_logo + ':'
+          it helps you keep track of your food.
+      #content
+        - if notice
+          %p.notice= notice
+        = yield
+      #sidebar
+        The invention provides an electronic device and a system for keeping track of one’s food inventory
+        around the house. The main intent of the device is to help solve the problem of food waste and make
+        the users life more economical and efficient. The device (the “scanner”) consists of an LCD touch
+        screen, an RFID reader, a wireless internet antenna, and a physical enclosure. Separate from the
+        scanner but essential to the system are a number of RFID tags. The tags are associated with information
+        about foods that is stored in a software database. The user will scan a food and the scanner will send
+        the RFID tag’s unique identifier to a software system. Based on the association between tag identifier
+        and food, that food will be considered part of the user’s personal inventory. The user can access their
+        inventory through a number of interfaces, and the system will send the user email reminders listing the
+        contents of their inventory. Through the use of the scanner device and RFID tags, the user has an
+        extremely convenient method for keeping track of their foods so that they are able to eat the foods
+        before they expire, and thus not contribute more waste to the world.
+      #footer
+        &copy; 2010 Alex Bird.

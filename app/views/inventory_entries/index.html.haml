@@ -10,17 +10,16 @@
     %th
     %th
   - @inventory_entries.each do |inventory_entry|
-  %tr
-    %td
-      = inventory_entry.inventory_transaction
-    %td
-      = inventory_entry.added_date
-    %td
-      = link_to 'Show', inventory_entry
-    %td
-      = link_to 'Edit', edit_inventory_entry_path(inventory_entry)
-    %td
-      = link_to 'Destroy', inventory_entry, :confirm => 'Are you sure?', :method => :delete
-  - end
+    %tr
+      %td
+        = inventory_entry.inventory_transaction
+      %td
+        = inventory_entry.added_date
+      %td
+        = link_to 'Show', inventory_entry
+      %td
+        = link_to 'Edit', edit_inventory_entry_path(inventory_entry)
+      %td
+        = link_to 'Destroy', inventory_entry, :confirm => 'Are you sure?', :method => :delete
 %br
 = link_to 'New inventory_entry', new_inventory_entry_path
