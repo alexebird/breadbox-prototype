@@ -2,13 +2,15 @@
 @import blueprint/reset.sass
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base.sass
+@import partials/mixins.sass
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
 // Import the non-default scaffolding module.
 @import blueprint/modules/scaffolding.sass
+@import blueprint/modules/buttons.sass
 
 // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
-// +blueprint
+//+blueprint
 
 //Recommended Blueprint configuration with scoping and semantic layout:
 +blueprint-typography("body.bp")
@@ -39,12 +41,31 @@ body.three-col
     // true means it's the last column in the row
     +column(!content_columns, true)
 
-// Abird's Additions
+///// Abird's Additions /////
+
+body.two-col
+  #container
+    +container
+  #header, #footer
+    +column(!blueprint_grid_columns)
+  #footer
+    text-align: center
+  #sidebar
+    // true means it's the last column in the row
+    +column(16, true)
+  #content
+    +column(8)
+    input[type="submit"]
+      +button-button
+
+.notice
+  display: none
 
 span.breadboxLogo
-  font-family: coolvetica
+  +fontHelvetica
   .breadPart
     color: black
   .boxPart
     color: white
     background-color: green
+

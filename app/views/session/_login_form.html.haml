@@ -1,0 +1,11 @@
+- form_tag('/login', :method => :post, :class => :bp) do
+  %fieldset
+    = label_tag :username
+    %br
+    = text_field_tag :username, nil, :class => :text
+    %br
+    = label_tag :password
+    %br
+    = password_field_tag :password, nil, :class => :text
+    %br
+    = submit_tag :Login
